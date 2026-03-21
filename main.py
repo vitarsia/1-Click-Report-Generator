@@ -1,35 +1,57 @@
 import csv
 import sys
 import os
+import matplotlib.pyplot as plt
 
 def process_csv(file_path):
+    dates = []
+    values = []
     total = 0
-    count = 0
 
     with open(file_path, newline='') as csvfile:
         reader = csv.reader(csvfile)
-        next(reader)  # skip header
+        header = next(reader)
 
         for row in reader:
             if not row or len(row) < 2:
                 continue
             try:
+                date = row[0]
                 value = float(row[1])
+
+                dates.append(date)
+                values.append(value)
+
                 total += value
-                count += 1
             except ValueError:
                 continue
 
-    average = total / count if count > 0 else 0
+    average = total / len(values) if values else 0
 
-    return total, average
+    return dates, values, total, average
 
 
 def write_report(total, average):
     os.makedirs("output", exist_ok=True)
-    with open("output/report.txt", "w") as f:
+
+    with open("output/sales_summary.txt", "w") as f:
         f.write(f"Total: {total}\n")
         f.write(f"Average: {average}\n")
+
+
+def create_chart(dates, values):
+    os.makedirs("output", exist_ok=True)
+
+    plt.figure()
+    plt.plot(dates, values, marker='o')
+    plt.title("Sales Over Time")
+    plt.xlabel("Date")
+    plt.ylabel("Sales")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+
+    plt.savefig("output/sales_trend.png")
+    plt.close()
 
 
 if __name__ == "__main__":
@@ -39,7 +61,9 @@ if __name__ == "__main__":
 
     file_path = sys.argv[1]
 
-    total, average = process_csv(file_path)
-    write_report(total, average)
+    dates, values, total, average = process_csv(file_path)
 
-    print("Report generated in output/report.txt")
+    write_report(total, average)
+    create_chart(dates, values)
+
+    print("Report and chart generated in output/")

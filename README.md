@@ -1,5 +1,5 @@
 # 1-Click Report Generator (CSV → Summary Report)
-
+Automatically generates visual insights from your data—no manual analysis needed
 ## 🚀 Overview
 Manually analyzing CSV data takes time and is error-prone.
 
