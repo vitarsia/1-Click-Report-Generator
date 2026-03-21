@@ -69,3 +69,15 @@ Instead of spending time manually processing data, this tool does it instantlyâ€
 - Charts and graphs
 - PDF export
 - Multi-column support
+
+
+## ðŸ“¸ Example Output
+
+```
+$ python main.py input/sample.csv
+
+Report generated successfully!
+
+Total: 735.0
+Average: 147.0
+```
