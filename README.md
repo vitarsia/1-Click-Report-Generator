@@ -73,11 +73,4 @@ Instead of spending time manually processing data, this tool does it instantlyâ€
 
 ## ðŸ“¸ Example Output
 
-```
-$ python main.py input/sample.csv
-
-Report generated successfully!
-
-Total: 735.0
-Average: 147.0
-```
+![Example Output](screenshot.png)
