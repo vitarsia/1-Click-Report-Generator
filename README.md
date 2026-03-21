@@ -69,3 +69,8 @@ Instead of spending time manually processing data, this tool does it instantlyâ€
 - Charts and graphs
 - PDF export
 - Multi-column support
+
+
+## ðŸ“¸ Example Output
+
+![Example Output](screenshot.png)
