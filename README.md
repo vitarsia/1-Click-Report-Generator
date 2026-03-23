@@ -33,6 +33,19 @@ Average Sales: 150
 
 ---
 
+## 💼 Real-World Use Case
+
+A small business exports sales data every week but spends hours manually analyzing it.
+
+With this tool:
+- Upload CSV
+- Run script
+- Instantly get totals + visual chart
+
+⏱️ Time saved: ~2–3 hours per week
+
+---
+
 ## ⚙️ How to Use
 
 1. Place your CSV file in the project folder
@@ -62,6 +75,20 @@ Instead of spending time manually processing data, this tool does it instantly�
 ## 📌 Notes
 - CSV should contain numeric values in the second column
 - Simple structure works best for this version
+
+---
+
+## 🔄 Before vs After
+
+❌ Before:
+- Manual Excel work
+- Time-consuming calculations
+- No clear visualization
+
+✅ After:
+- Automated report in seconds
+- Clear summary
+- Visual chart included
 
 ---
 
